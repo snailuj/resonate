@@ -1,0 +1,453 @@
+@tailwind preflight;
+@tailwind utilities;
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v8/BngMUXZYTXPIvIBgJJSb6ufN5qA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(https://fonts.gstatic.com/s/robotoslab/v8/BngRUXZYTXPIvIBgJJSb6u92w7CGwRg.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v10/jizaRExUiTo99u79D0KEwA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v10/BngRUXNadjH0qYEzV7ab-oWlsbCGwRg.ttf) format('truetype');
+}
+
+html {
+  @apply text-grey-light;
+  font-family: 'PT Sans';
+  background-color: config('colors.teal-darker');
+}
+.container {
+  @apply pl-4 pr-4 mt-4 mb-4 pb-8;
+}
+h1 {
+  @apply mt-6 mb-4;
+}
+h2 {
+  @apply mt-6 mb-4;
+}
+h3 {
+  @apply mt-2 mb-1;
+}
+h4
+, h5 {
+  @apply mt-1 mb-1;
+} 
+h1
+, h2
+, h3
+, h4
+, h5
+, h6 {
+  @apply font-bold text-green;
+  font-family: 'PT Sans';
+}
+h1 {
+  color: config('colors.pink');
+}
+code
+, kbd
+, pre
+, samp {
+  @apply font-mono font-semibold;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  @apply bg-teal-darker text-grey;
+  @apply border border-grey-darker;
+  box-shadow: 5pt 5pt 8pt config('colors.teal-dark');
+}
+code {
+  @apply pt-0 pb-0 pl-1 pr-1 bg-teal-dark text-grey-lightest;
+}
+a {
+  color: config('colors.orange');
+}
+a:visited
+, a:hover {
+  color: config('colors.orange-dark');
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active
+, a:hover {
+  outline: 0;
+}
+ul {
+  @apply mb-3;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b
+, strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+sub
+, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+/* Pulls lists to the left, ridiculous hack */
+ul {
+  padding-left: 0.25rem;
+}
+li {
+  list-style: none;
+  padding-left: 1.25rem;
+  position: relative;
+}
+li::before {
+  left: 0;
+  position: absolute;
+}
+ul li::before {
+  content: "●";
+}
+.headers {
+  @apply flex flex-wrap content-center;
+}
+.contact-irl {
+  order: -2;
+}
+.headers p {
+  @apply leading-tight whitespace-no-wrap;
+}
+.name {
+  @apply w-full;
+}
+.name h1 {
+  @apply text-3xl text-center mb-0;
+}
+.name .small {
+  font-size: 1.35rem;
+}
+.contact-online {
+  order: -1;
+  @apply ml-auto flex flex-col justify-center;
+}
+.contact-online p {
+  @apply text-right w-full;
+}
+article {
+  width: 100%;
+}
+.proficiencies section {
+  @apply flex flex-wrap;
+}
+.proficiencies .apis .column {
+  @apply w-full; /* force wrapping for Firefox */
+}
+.proficiencies h2 {
+  @apply w-full text-center;
+}
+.proficiencies .languages .column {
+  @apply w-1/2; 
+}
+.proficiencies table {
+  @apply table-fixed w-full;
+}
+.proficiencies td {
+  @apply text-left;
+}
+.proficiencies td:first-child {
+  width: 60%;
+  @apply text-right;
+}
+.proficiencies .apis td:first-child {
+  width: 50%;
+}
+.legend {
+  @apply italic text-xs text-grey-lighter text-center mt-4;
+}
+.employment h2
+, .projects h2
+, .education h2 { 
+  @apply w-full inline-block leading-neg-tight;
+  border-bottom: 2px solid currentColor;
+  text-shadow: 2px 0px #002b36, 2px -2px #002b36, -2px 0px #002b36, -2px -2px #002b36;
+}
+.employment h2 {
+  @apply flex;
+}
+.employment h2 span {
+  @apply w-full text-right text-xl;
+}
+.employment h2 span span {
+  @apply text-sm;
+}
+.projects p {
+  @apply mt-3 mb-3;
+}
+.position {
+  @apply flex flex-wrap; 
+}
+.position.after-heading
+, .project.after-heading
+, .course.after-heading {
+  @apply mt-0 border-none pt-0;
+}
+.position header {
+  @apply w-full;
+}
+.position header h4
+  , .position header svg {
+  @apply w-full text-right m-0 leading-tighter text-pink;
+}
+.position .icons {
+  width: 10%;
+  @apply mr-auto text-left;
+}
+.position .role {
+  width: 90%;
+  @apply ml-auto mb-4;
+}
+.position .timespan {
+  @apply ml-auto;
+}
+.position > p
+, .position li
+, .project > p
+, .project li {
+  @apply mt-1 leading-tighter w-full;
+}
+@screen xs {
+  .proficiencies .apis .column {
+    width: 50%;
+  }
+  .proficiencies .apis td:first-child {
+    width: 70%;
+  }
+}
+@screen md {
+  html {
+    @apply text-xl;
+  }
+  .headers {
+    @apply pt-8;
+  }
+  .proficiencies {
+    @apply flex flex-wrap items-baseline;
+  }
+  .proficiencies .languages {
+    @apply w-2/5;
+  }
+  .proficiencies .apis {
+    @apply w-3/5;
+  }
+  .proficiencies .legend {
+    @apply w-full;
+  }
+  .position .icons {
+    margin-right: unset;
+    @apply ml-auto w-auto;
+  }
+  .position .role {
+    @apply w-auto ml-3;
+  }
+  .headers {
+    @apply flex-no-wrap;
+  }
+  .contact-online {
+    order: unset;
+  }
+  h2 {
+    @apply mt-8;
+  }
+  .education section {
+    @apply flex flex-wrap;
+  }
+  .education .location {
+    @apply mr-auto w-1/5;
+  }
+  .education .years {
+    @apply mr-auto w-1/5 text-right mb-4;
+  }
+  .education .institute {
+    @apply w-3/5 text-center;
+  }
+  .education ul {
+    @apply w-full;
+  }
+}
+@screen lg {
+  html {
+    @apply text-2xl;
+  }
+}
+@screen xl {
+  html {
+    @apply bg-teal-dark;
+  }
+  .container {
+    width: 1200px;
+    @apply ml-auto mr-auto bg-teal-darker rounded-sm shadow-md;
+  }
+}
+@screen print {
+  @page {
+    margin: 1cm;
+  }
+  html
+  , h1
+  , h2
+  , h3
+  , h4
+  , h5
+  , h6
+  , .position header h4
+  , .position header svg 
+  , .legend {
+    font-family: 'Roboto Slab' !important;
+    @apply text-teal-dark;
+  }
+  html {
+    @apply text-xs bg-cream;
+  }
+  .container {
+    @apply bg-cream;
+  }
+  .contact-online {
+    order: -2;
+  }
+  .contact-irl {
+    order: -1;
+    @apply text-right pt-6;
+  }
+  .headers {
+    @apply flex-wrap pt-8;
+  }
+  .headers header {
+    @apply w-full;
+  }
+  header
+  , .position {
+    break-inside: avoid;
+  }
+  h2 
+  , .projects h2
+  , .employment h2
+  , .education h2 {
+    text-shadow: 2px 0px config('colors.cream'), 
+      2px -2px config('colors.cream'), 
+      -2px 0px config('colors.cream'), 
+      -2px -2px config('colors.cream');
+  }
+  /* Show hrefs visibly for printing */ 
+  a[href] {
+    font-size: 0;
+  }
+  a[href]:after {
+    content: attr(href);
+    font-size: 1rem;
+  } /* And remove the text color and underline */
+  a
+  , a:visited
+  , a:hover {
+    @apply no-underline text-teal-dark;
+  }
+  code {
+    @apply bg-cream-dark text-teal-darker font-medium;
+  }
+  pre code {
+    background-color: config('colors.cream');
+  }
+  .project
+  , .position {
+    @apply border-teal-dark;
+  }
+  .position header h4
+    , .position header svg {
+    @apply leading-none;
+  }
+  .proficiencies {
+    @apply flex flex-wrap items-baseline;
+  }
+  .proficiencies .languages {
+    @apply w-2/5;
+  }
+  .proficiencies .apis {
+    @apply w-3/5;
+  }
+  .proficiencies .legend {
+    @apply w-full;
+  }
+  .position .icons {
+    margin-right: unset;
+    @apply ml-auto w-auto;
+  }
+  .position .role {
+    @apply w-auto ml-3;
+  }
+  h2 {
+    @apply mt-8;
+  }
+  .education section {
+    @apply flex flex-wrap;
+  }
+  .education .location {
+    @apply mr-auto w-1/5;
+  }
+  .education .years {
+    @apply mr-auto w-1/5 text-right mb-4;
+  }
+  .education .institute {
+    @apply w-3/5 text-center;
+  }
+  .education ul {
+    @apply w-full;
+  }
+}
+

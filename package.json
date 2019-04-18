@@ -1,0 +1,40 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "resume.html",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snailuj/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snailuj/resume/issues"
+  },
+  "homepage": "https://github.com/snailuj/resume#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "postcss-easy-import": "^3.0.0",
+    "tailwindcss": "^0.7.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-regular-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@zeit/next-css": "^1.0.1",
+    "next": "^8.0.4",
+    "postcss": "^7.0.14",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.29.6"
+  }
+}
