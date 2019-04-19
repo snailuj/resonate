@@ -1,9 +1,12 @@
 import '../styles/solarized.css'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Meta from '../components/meta'
 
 const SevenCups = () => {
-  return <div className="container">
+  return <>
+    <Meta title="Julian Suggate | Full Resume"/>
+    <div className="container">
     <div className="headers">
       <header className="name">
         <h1>Julian Suggate</h1>
@@ -239,7 +242,7 @@ const SevenCups = () => {
         </section>
         <section className="project">
           <h4>Solarized Resume Theme</h4>
-          <p><a href="http://github.com/snailuj/resonate">Solarized resume theme</a> is the markup and CSS used to create the document you are currently viewing (both print and web).</p>
+          <p><a href="http://snailuj.github.io">Solarized resume theme</a> is the markup and CSS used to create the document you are currently viewing (both print and web).</p>
           <ul>
             <li>Utilises Next.js to inject the React ecosystem</li>
             <li>Provides Tailwind CSS framework and enables editing with Hot Module Reloading.</li>
@@ -502,6 +505,7 @@ const SevenCups = () => {
       </section>
     </article>
   </div>
+  </>
 }
 
 export default SevenCups;

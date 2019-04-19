@@ -1,9 +1,12 @@
 import '../styles/solarized.css'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Meta from '../components/meta'
 
 const Blank = () => {
-  return <div className="container">
+  return <>
+    <Meta title="Blank | Solarized Resume Theme"/>
+    <div className="container">
       <div className="headers">
       <header className="name">
         <h1>Your Name</h1>
@@ -233,6 +236,7 @@ const Blank = () => {
       </section>
     </article>
   </div>
+  </>
 }
 
 export default Blank;
