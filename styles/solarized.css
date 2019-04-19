@@ -136,7 +136,6 @@ ul li::before {
 .headers {
   @apply flex flex-wrap justify-between;
 }
-
 .headers p {
   @apply leading-tight whitespace-no-wrap;
 }
@@ -259,8 +258,12 @@ article {
   html {
     @apply text-xl;
   }
+  .headers {
+    @apply relative;
+  } 
   .name {
-    @apply w-auto flex-grow;
+    @apply absolute pin-x; 
+    top: -1rem;
   }
   .proficiencies {
     @apply flex flex-wrap items-baseline justify-around;
@@ -348,13 +351,6 @@ article {
     font-family: 'Roboto Slab' !important;
     @apply text-teal-dark;
   }
-  .headers {
-    @apply relative;
-  } 
-  .name {
-    @apply absolute pin-x; 
-    top: -1rem;
-  }
   h2 {
     @apply mb-2 mt-6;
   }
@@ -363,6 +359,13 @@ article {
   }
   .container {
     @apply bg-cream;
+  }
+  .headers {
+    @apply relative;
+  } 
+  .name {
+    @apply absolute pin-x; 
+    top: -1rem;
   }
   header
   , .position {

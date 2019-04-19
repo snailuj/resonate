@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const SevenCups = () => {
   return <div className="container">
-      <div className="headers">
+    <div className="headers">
       <header className="name">
-        <h1>Julian Suggate <span className="small">B.Sc.</span></h1>
+        <h1>Julian Suggate</h1>
+        <h2>B.Sc., RYT200, CMT</h2>
       </header>
       <header className="contact-online">
         <p><a href="mailto:julian.suggate@gmail.com">Email</a><br/></p>
@@ -354,7 +355,7 @@ const SevenCups = () => {
             <h4>Cerebral Fix Ltd.</h4>
             <h4>2009 &ndash; 2011</h4>
           </header>
-          <p>Cerebral Fix (cerebralfix.com): Flash / Facebook / Unity casual game dev.</p>
+          <p><a href="http://cerebralfix.com">Cerebral Fix</a>: Flash / Facebook / Unity casual game dev.</p>
           <ul>
             <li>Created <code>linq to SQL</code> layer using <code>C#</code> and <code>SQL Server</code> for persisting game high scores and preferences.</li>
             <li>Spearheaded, built and analysed in-game <code>Mixpanel</code> cloud metrics for tracking game adoption and usage.</li>
@@ -363,21 +364,6 @@ const SevenCups = () => {
         </section>
         <h2 className="earlier">Earlier Roles</h2>
         <section className="position after-heading">
-          <header className="icons">
-          </header>
-          <header className="role">
-            <h4>Full-Stack Developer</h4>
-            <h4>Cerebral Fix Ltd.</h4>
-            <h4>2009 &ndash; 2011</h4>
-          </header>
-          <p><a href="http://www.cerebralfix.com">Cerebral Fix</a>: Flash / Facebook / Unity casual game dev.</p>
-          <ul>
-            <li>Created <code>linq to SQL</code> layer using <code>C#</code> and <code>SQL Server</code> for persisting game high scores and preferences.</li>
-            <li>Spearheaded, built and analysed in-game <code>Mixpanel</code> cloud metrics for tracking game adoption and usage.</li>
-            <li>Created strongly-typed client-server <code>JSON</code> remoting layers in both <code>Actionscript 3</code> and <code>C#</code>, using <code>WCF</code> in <code>ASP.NET 2.0</code>.</li>
-          </ul>
-        </section>
-        <section className="position">
           <header className="icons">
             <FontAwesomeIcon icon="wifi"/>
           </header>
