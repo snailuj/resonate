@@ -1,0 +1,7 @@
+out
+.next
+Session.vim
+package-lock.json
+yarn.lock
+
+ghpages
