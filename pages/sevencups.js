@@ -1,1 +1,0 @@
-../resume/pages/sevencups.js

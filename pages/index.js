@@ -5,9 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home = () => {
   return <>
-    <Link href="sevencups">
-      <a>Seven Cups</a>
-    </Link>
+    <div className="container">
+      <nav>
+        <Link prefetch href="blank"><a>Blank Sample</a></Link>
+        <Link prefetch href="full"><a>Full Sample</a></Link>
+      </nav>
+    </div>
   </>
 }
 
