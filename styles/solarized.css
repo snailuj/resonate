@@ -249,6 +249,8 @@ article {
 }
 .position > p
 , .position li
+, .earlier > p
+, .earlier li
 , .project > p
 , .project li {
   @apply mt-1 leading-tighter w-full;
@@ -363,10 +365,11 @@ article {
     @apply text-teal-dark;
   }
   h2 {
-    @apply mb-2 mt-6;
+    @apply mb-2 mt-4;
   }
   html {
-    @apply text-xs bg-cream;
+    @apply bg-cream;
+    font-size: 10pt;
   }
   .container {
     @apply bg-cream;
@@ -378,9 +381,11 @@ article {
     @apply absolute pin-x; 
     top: -1rem;
   }
-  header
-  , .position {
+  header {
     break-inside: avoid;
+  }
+  .position {
+    @apply mt-3;
   }
   h2 
   , .projects h2
