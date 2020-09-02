@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700');
+
+@tailwind preflight;
+@tailwind utilities;
+
+html {
+  @apply text-grey-light;
+  font-family: 'Roboto';
+  background-color: config('colors.teal-darker');
+}
+.container {
+  @apply pl-4 pr-4 mt-4 mb-4 pt-4 pb-8;
+}
+nav {
+  @apply flex flex-wrap items-center justify-center;
+}
+nav a {
+  @apply m-3;
+}
+.index a.button {
+  @apply flex w-full items-center justify-center text-grey-light no-underline rounded bg-teal-dark p-2 border border-teal-dark;
+}
+.index a.button:hover {
+  @apply border-grey-darker;
+}
+.index svg {
+  width: 50px;
+  height: 50px;
+  @apply ml-4;
+}
+h1 {
+  @apply mt-6 mb-4;
+}
+h3 {
+  @apply mt-2 mb-1;
+}
+h4
+, h5 {
+  @apply mt-1 mb-1;
+} 
+h1
+, h2
+, h3
+, h4
+, h5
+, h6 {
+  @apply font-bold text-green;
+}
+h1 {
+  @apply text-pink text-2xl;
+}
+code
+, kbd
+, pre
+, samp {
+  @apply font-mono font-semibold;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  @apply bg-teal-darker text-grey;
+  @apply border border-grey-darker;
+  box-shadow: 5pt 5pt 8pt config('colors.teal-dark');
+}
+code {
+  @apply pt-0 pb-0 pl-1 pr-1 bg-teal-dark text-grey-lightest;
+}
+a {
+  color: config('colors.orange');
+}
+a:visited
+, a:hover {
+  color: config('colors.orange-dark');
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active
+, a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b
+, strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+sub
+, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+/* Pulls lists to the left, ridiculous hack */
+ul {
+  padding-left: 0.25rem;
+  margin-block-end: 1rem;
+}
+li {
+  list-style: none;
+  padding-left: 1.25rem;
+  position: relative;
+}
+li::before {
+  left: 0;
+  position: absolute;
+}
+ul li::before {
+  content: "●";
+}
+span.nudge-right {
+  @apply ml-3;
+}
+.headers {
+  @apply flex flex-wrap justify-between;
+}
+.headers p {
+  @apply leading-tight whitespace-no-wrap;
+}
+.name h1 {
+  @apply text-3xl text-center mb-0;
+}
+.name h2 {
+  font-size: 1.35rem;
+  @apply text-pink text-center mt-0;
+}
+.name h3 {
+  @apply text-pink text-center;
+}
+.contact-irl
+, .contact-online {
+  @apply flex flex-col justify-center;
+}
+.contact-irl {
+  order: -2;
+}
+.contact-online {
+  order: -1;
+}
+.contact-online p {
+  @apply text-right w-full;
+}
+article {
+  @apply w-full pl-12;
+}
+.proficiencies .row {
+  @apply flex w-full;
+}
+.proficiencies h2 {
+  @apply w-full;
+}
+.proficiencies td:first-child {
+  @apply pr-2;
+}
+.legend {
+  @apply italic text-xs text-grey-lighter text-center mt-4;
+}
+.employment h2
+, .projects h2
+, .earlier h2
+, .education h2
+, .splash h2 {
+  @apply w-full inline-block whitespace-no-wrap;
+}
+.projects h2 {
+  @apply mb-4;
+}
+.projects h4 {
+  @apply mt-4;
+}
+.project.after-heading h4 {
+  @apply mt-0;
+}
+.employment h2 {
+  @apply flex;
+}
+.earlier h2 {
+  @apply mb-3;
+}
+.projects p
+, .earlier p {
+  @apply mt-3;
+}
+.position {
+  @apply flex flex-wrap;
+}
+.position header {
+  @apply w-full mb-2;
+}
+.position header h4
+  , .position header svg {
+  @apply w-full m-0 leading-tighter text-pink;
+}
+.position .icons {
+  width: 10%;
+  @apply mr-auto text-left;
+}
+.position .timespan {
+  @apply ml-auto;
+}
+.position > p
+, .position li
+, .earlier > p
+, .earlier li
+, .project > p
+, .project li {
+  @apply mt-1 leading-tighter w-full;
+}
+.education .course ul {
+  @apply list-reset;
+}
+.education .course li {
+  @apply pl-0;
+}
+.education li::before {
+  content: "";
+}
+.education ul li::before {
+  content: "";
+}
+@screen md {
+  html {
+    @apply text-xl;
+  }
+  .name {
+    top: -1rem;
+  }
+  article.proficiencies > h2 {
+    @apply w-full text-center;
+  }
+  section.proficiencies {
+    @apply flex flex-wrap items-baseline w-full;
+  }
+  .proficiencies .legend {
+    @apply w-full;
+  }
+  .position .icons {
+    margin-right: unset;
+    @apply ml-auto w-auto;
+  }
+  .headers {
+    @apply flex-no-wrap;
+  }
+  .contact-online {
+    order: unset;
+  }
+  .education .course {
+    @apply flex flex-wrap justify-center;
+  }
+  .education .course ul {
+    @apply w-full text-center;
+  }
+  .education header {
+    @apply w-1/4;
+  }
+  .education .years {
+    @apply text-right;
+  }
+  .education .institute {
+    @apply w-1/3 text-center;
+  }
+  
+}
+@screen lg {
+  html {
+    @apply text-2xl;
+  }
+  .name h1 {
+    @apply text-4xl;
+  }
+  .name .small {
+    font-size: 1.6rem;
+  }
+}
+@screen xl {
+  html {
+    @apply bg-teal-dark;
+  }
+  .container {
+    width: 1200px;
+    @apply ml-auto mr-auto bg-teal-darker rounded-sm shadow-md;
+  }
+  .proficiencies td {
+    @apply pr-2;
+  }
+}
+@screen print {
+  @page {
+    margin: 1cm;
+  }
+  html
+  , h1
+  , h2
+  , h3
+  , h4
+  , h5
+  , h6
+  , .position header h4
+  , .position header svg 
+  , .legend
+  , .name h2 {
+    font-family: 'Roboto Slab' !important;
+    @apply text-teal-dark;
+  }
+  html {
+    @apply bg-cream;
+    font-size: 10pt;
+  }
+  .container {
+    @apply bg-cream;
+  }
+  .headers {
+    @apply relative;
+  } 
+  .name {
+    @apply absolute pin-x; 
+    top: -1rem;
+  }
+  header, section.employment, section.position {
+    break-inside: avoid;
+  }
+  .position {
+    @apply mt-3;
+  }
+  h2 
+  , .projects h2
+  , .employment h2
+  , .earlier h2
+  , .education h2 {
+    line-height: 0.90;
+  }
+  .earlier h2 {
+    line-height: 0.95;
+  } 
+  /* Show hrefs visibly for printing */ 
+  a[href] {
+    font-size: 0;
+  }
+  a[href]:after {
+    content: attr(href);
+    font-size: 1rem;
+  } /* And remove the text color and underline */
+  a
+  , a:visited
+  , a:hover {
+    @apply no-underline text-teal-dark;
+  }
+  code {
+    @apply bg-cream-dark text-teal-darker;
+  }
+  pre code {
+    background-color: config('colors.cream');
+  }
+  .project
+  , .position {
+    @apply border-teal-dark;
+  }
+  .position header h4
+    , .position header svg {
+    @apply leading-none;
+  }
+  section.proficiencies {
+    @apply flex flex-wrap items-baseline;
+  }
+  section.proficiencies section {
+    @apply w-1/2;
+  }
+  section.prof1.w-full {
+    width: 100%;
+  }
+  .proficiencies .legend {
+    @apply w-full;
+  }
+  .position .icons {
+    margin-right: unset;
+    @apply ml-auto w-auto;
+  }
+  .position .role {
+    @apply w-auto;
+  }
+  .education .course {
+    @apply flex flex-wrap justify-center;
+  }
+  .education header {
+    @apply w-1/4;
+  }
+  .education h4 {
+    @apply text-teal-dark;
+  }
+  .education .years {
+    @apply text-right;
+  }
+  .education .institute {
+    @apply w-1/3 text-center;
+  }
+  .education ul {
+    @apply list-reset w-full text-center;
+  }
+  .education li::before {
+    content: "";
+  }
+  .education ul li::before {
+    content: "";
+  }
+}
+
